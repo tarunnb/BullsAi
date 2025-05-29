@@ -4,6 +4,10 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import ChatInterface from '@/components/ChatInterface'
 import CursorGradient from '@/components/CursorGradient'
+import FinancialMetrics from '@/components/FinancialMetrics'
+import StockChart from '@/components/StockChart'
+import FinancialTables from '@/components/FinancialTables'
+import DocumentsSection from '@/components/DocumentsSection'
 
 interface Message {
   id: string
@@ -169,6 +173,14 @@ export default function Home() {
           </div>
         </motion.div>
       </main>
+
+      {/* Financial Data Sections */}
+      <div className="relative z-10">
+        <FinancialMetrics />
+        <StockChart />
+        <FinancialTables />
+        <DocumentsSection />
+      </div>
 
       <style jsx>{`
         @keyframes pulse {
